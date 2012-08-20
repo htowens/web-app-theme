@@ -31,7 +31,7 @@
 	        			</tr>
 					</thead>
 					<tbody>
-						<tr class="<%= cycle("odd", "even") %>">
+						<tr class="<%%= cycle("odd", "even") %>">
 							<%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
 	          				<td>
 					            <%%= <%= resource_name %>.id %>
