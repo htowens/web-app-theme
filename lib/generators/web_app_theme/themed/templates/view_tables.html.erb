@@ -16,13 +16,10 @@
 							<th class="hide">
 								Delete Link
 							</th>
-							<th class="first">
-								<%= columns.first.name.capitalize %>
-							</th>
 							<%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
 								<% columns.each do |column| -%>
 							<th>
-								<%%= <%= column.name %> -%>
+								<%%= column.name.capitalize -%>
 							</th>
 								<% end -%>
 							<%% end -%>
