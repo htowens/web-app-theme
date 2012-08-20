@@ -19,19 +19,22 @@
 							<th class="first">
 								<%= columns.first.name.capitalize %>
 							</th>
-	                    	<th>
-								Customer
-	          				</th>
-	                    	<th>
-								Vehicle
+							<%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
+								<% columns.each do |column| -%>
+							<th>
+								<%%= <%= column.name %> -%>
 							</th>
-	          				<th>
-								Date of Sale
-							</th>
+							<%% end -%>
 	        			</tr>
 					</thead>
 					<tbody>
 						<tr class="<%%= cycle("odd", "even") %>">
+							<td>
+								<%%= <%= model_name %>_edit_path(<%= resource_name %>) -%>
+							</td>
+							<td>
+								<%%= <%= model_name %>_path(<%= resource_name %>) -%>
+							</td>
 							<%% @<%= plural_resource_name %>.each do |<%= resource_name %>| -%>
 	          				<td>
 					            <%%= <%= resource_name %>.id %>
